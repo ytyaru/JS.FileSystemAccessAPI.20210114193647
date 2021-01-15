@@ -1,7 +1,7 @@
 var root_dir = null;
 var selected_fileHandle = null;
 window.addEventListener('load', (event) => {
-    document.querySelector('#btn_load').addEventListener('click', async() => {
+    document.querySelector('#btn_select_dir').addEventListener('click', async() => {
         const dirHandle = await window.showDirectoryPicker();
         root_dir = dirHandle;
         console.log(dirHandle);
@@ -12,14 +12,14 @@ window.addEventListener('load', (event) => {
         }
 
     });
-    document.querySelector('#btn_save_as').addEventListener('click', async() => {
+    document.querySelector('#btn_select_file').addEventListener('click', async() => {
         [fileHandle] = await window.showOpenFilePicker();
         await readFile(fileHandle);
         if (root_dir) {
             const path = await root_dir.resolve(fileHandle);
             path.unshift(root_dir.name);
             console.log(path);
-            document.querySelector('#file_name').textContent = path.join('/');
+            document.querySelector('#file_path').textContent = path.join('/');
         }
     });    
     // ファイルを読み込む
@@ -29,9 +29,9 @@ window.addEventListener('load', (event) => {
         const fileContents = await file.text();
         console.log(file);
         console.log(fileContents);
-        document.querySelector('#file_name').textContent = file.name;
+        document.querySelector('#file_path').textContent = file.name;
         document.querySelector('#editor').value = fileContents;
-        document.querySelector('#btn_save').disabled = false;
+//        document.querySelector('#btn_save').disabled = false;
     }
     /*
     // DBを開く
