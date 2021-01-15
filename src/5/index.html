@@ -2,15 +2,14 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <title>JSのFileSystemAccessAPIを使う（書込許可（失敗））</title>
+    <title>JSのFileSystemAccessAPIを使う（書込許可）</title>
     <script src='./dexie-3.0.3.min.js'></script>
     <script src='./main.js'></script>
 </head>
 <body>
-<h1>JSのFileSystemAccessAPIを使う（書込許可（失敗））</h1>
+<h1>JSのFileSystemAccessAPIを使う（書込許可）</h1>
 <ul><li>JS.FileSystemAccessAPI.20210114193647</li></ul>
-<p>　ローカルのファイルシステムへ指定したテキストファイルを書き込む。パーミッションを指定する。書き込み許可を与えることで確認ダイアログの表示を抑制する。ユーザは操作手順がひとつ減って便利になる。</p>
-<p>　失敗。パーミッションは必ず1ファイルあたり1度、ユーザが確認ダイアログで許可する必要がある。その結果を保持したFileHandleをIndexedDBで保存することで、もう確認ダイアログを使わずともよくなる。確認を省略するには、IndexedDBで保存する必要がある。</p>
+<p>　ローカルのファイルシステムへ指定したテキストファイルを書き込む。最後に保存したファイルのハンドルを保存する。これでパーミッションも保存される。書込許可があるため、確認ダイアログが表示されなくなる。</p>
 <div>
     <input id="btn_load" type="button" value="Load"></input>
     <input id="btn_save" type="button" value="Save"></input>
