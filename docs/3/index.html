@@ -9,12 +9,12 @@
 <h1>JSのFileSystemAccessAPIを使う。</h1>
 <ul><li>JS.FileSystemAccessAPI.20210114193647</li></ul>
 <p>　ローカルのファイルシステムへ指定したテキストファイルを書き込む。</p>
-<h1>使い方</h1>
-<ol>
-    <li>HTML文書内のどこかをクリックする</li>
-    <li>ファイル選択ダイアログが出る</li>
-    <li>任意のテキストファイルパスを入力する</li>
-    <li>指定したパスに<code>書き込みたい内容</code>という内容のテキストファイルが作成されている</li>
-</ol>
+<div>
+    <input id="btn_load" type="button" value="Load"></input>
+    <input id="btn_save" type="button" value="Save"></input>
+    <input id="btn_save_as" type="button" value="SaveAs"></input>
+    <span id="file_name"></span>
+</div>
+<textarea id="editor" cols="80" rows="20"></textarea>
 </body>
 </html>

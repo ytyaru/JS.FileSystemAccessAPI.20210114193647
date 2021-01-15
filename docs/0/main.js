@@ -1,5 +1,10 @@
 window.addEventListener('load', (event) => {
-    const msg = 'Hello JavaScript !!'
-    console.log(msg);
-    alert(msg);
+    window.addEventListener('click', async() => {
+        [fileHandle] = await window.showOpenFilePicker();
+        const file = await fileHandle.getFile();
+        const fileContents = await file.text();
+        console.log(file);
+        console.log(fileContents);
+    });
 });
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>JSのFileSystemAccessAPIを使う（パス）</title>
+    <script src='./dexie-3.0.3.min.js'></script>
+    <script src='./main.js'></script>
+</head>
+<body>
+<h1>JSのFileSystemAccessAPIを使う（パス）</h1>
+<ul><li>JS.FileSystemAccessAPI.20210114193647</li></ul>
+<p>　指定したディレクトリからの相対パスを表示する。</p>
+<ol>
+    <li><code>Select Dir</code>ボタンでルートディレクトリを選ぶ</li>
+    <li><code>Select File</code>でルートディレクトリ配下にある任意のファイルを選ぶ</li>
+    <li>ファイルパスが表示される。パスは選んだディレクトリからの相対パスである</li>
+</ol>
+<div>
+    <!--
+    <input id="btn_load" type="button" value="Load"></input>
+    <input id="btn_save" type="button" value="Save" disabled></input>
+    <input id="btn_save_as" type="button" value="SaveAs"></input>
+    <span id="file_name"></span>
+    -->
+    <input id="btn_select_dir" type="button" value="Select Dir"></input>
+    <input id="btn_select_file" type="button" value="Select File"></input>
+    <span id="file_path"></span>
+</div>
+<textarea id="editor" cols="80" rows="20"></textarea>
+</body>
+</html>
