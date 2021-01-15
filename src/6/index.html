@@ -2,14 +2,15 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <title>JSのFileSystemAccessAPIを使う（書込許可）</title>
+    <title>JSのFileSystemAccessAPIを使う（Save disable）</title>
     <script src='./dexie-3.0.3.min.js'></script>
     <script src='./main.js'></script>
 </head>
 <body>
-<h1>JSのFileSystemAccessAPIを使う（書込許可）</h1>
+<h1>JSのFileSystemAccessAPIを使う（Save disable）</h1>
 <ul><li>JS.FileSystemAccessAPI.20210114193647</li></ul>
-<p>　ローカルのファイルシステムへ指定したテキストファイルを書き込む。最後に保存したファイルのハンドルを保存する。これでパーミッションも保存される。書込許可があるため、確認ダイアログが表示されなくなる。</p>
+<p>　ローカルのファイルシステムへ指定したテキストファイルを書き込む。上書き保存の<code>Save</code>ボタンは<code>Load</code>または<code>SaveAs</code>せねば使えない。
+<p>　最後に保存したファイルのハンドルを保存する。これでパーミッションも保存される。書込許可があるため、確認ダイアログが表示されなくなる。</p>
 <div>
     <input id="btn_load" type="button" value="Load"></input>
     <input id="btn_save" type="button" value="Save" disabled></input>
